@@ -117,7 +117,7 @@ Gostaria de mais informações!`;
               
               <div className="flex space-x-2">
                 <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                  <Heart className="h-5 w-5 text-rose-500" />
+                  <Heart className="h-5 w-5 text-gold" />
                 </button>
                 <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
                   <Share2 className="h-5 w-5 text-gray-600" />
@@ -130,7 +130,7 @@ Gostaria de mais informações!`;
               <div>
                 <h1 className="text-2xl font-bold text-gray-900 mb-2">{product.name}</h1>
                 <p className="text-gray-600 mb-4">{product.description}</p>
-                <div className="text-3xl font-bold text-rose-600">
+                <div className="text-3xl font-bold text-gold">
                   R$ {product.price.toFixed(2).replace('.', ',')}
                 </div>
               </div>
@@ -150,8 +150,8 @@ Gostaria de mais informações!`;
                       className={`
                         py-2 px-4 border rounded-md text-sm font-medium transition-all duration-200
                         ${selectedSize === size
-                          ? 'bg-rose-500 text-white border-rose-500'
-                          : 'bg-white text-gray-700 border-gray-300 hover:border-rose-300'
+                          ? 'bg-gold text-white border-gold'
+                          : 'bg-white text-gray-700 border-gray-300 hover:border-gold-hover'
                         }
                       `}
                     >
@@ -175,7 +175,7 @@ Gostaria de mais informações!`;
                           setSelectedSize('');
                         }}
                         placeholder="Ex: 85"
-                        className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                        className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-gold focus:border-transparent"
                       />
                     </div>
                     <div>
@@ -190,7 +190,7 @@ Gostaria de mais informações!`;
                           setSelectedSize('');
                         }}
                         placeholder="Ex: 40"
-                        className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                        className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-gold focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -214,8 +214,8 @@ Gostaria de mais informações!`;
                       className={`
                         py-2 px-4 border rounded-md text-sm font-medium transition-all duration-200
                         ${selectedColor === color
-                          ? 'bg-rose-500 text-white border-rose-500'
-                          : 'bg-white text-gray-700 border-gray-300 hover:border-rose-300'
+                          ? 'bg-gold text-white border-gold'
+                          : 'bg-white text-gray-700 border-gray-300 hover:border-gold'
                         }
                       `}
                     >
@@ -229,7 +229,7 @@ Gostaria de mais informações!`;
                     <h4 className="text-sm font-medium text-gray-900">Escolher cor personalizada:</h4>
                     <button
                       onClick={() => setShowColorPalette(!showColorPalette)}
-                      className="flex items-center space-x-2 px-3 py-1 bg-rose-500 text-white rounded-md hover:bg-rose-600 transition-colors"
+                      className="flex items-center space-x-2 px-3 py-1 bg-gold text-white rounded-md hover:bg-gold transition-colors"
                     >
                       <Palette className="h-4 w-4" />
                       <span className="text-sm">Paleta</span>
@@ -267,7 +267,7 @@ Gostaria de mais informações!`;
                       setSelectedColor('');
                     }}
                     placeholder="Ou digite uma cor específica (ex: Azul bebê, Rosa chá...)"
-                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gold focus:border-transparent"
                   />
                 </div>
               </div>
@@ -282,7 +282,7 @@ Gostaria de mais informações!`;
                   onChange={(e) => setNotes(e.target.value)}
                   placeholder="Alguma observação especial sobre o produto..."
                   rows={3}
-                  className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gold focus:border-transparent"
                 />
               </div>
 
