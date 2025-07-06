@@ -27,8 +27,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onProductClic
           className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <button className="p-2 bg-white rounded-full shadow-md hover:bg-rose-50 transition-colors">
-            <Heart className="h-5 w-5 text-rose-500" />
+          <button className="p-2 bg-gold rounded-full shadow-md hover:bg-gold-hover transition-colors">
+            <Heart className="h-5 w-5 text-white" />
           </button>
         </div>
         <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -41,9 +41,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onProductClic
       
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{product.name}</h3>
-        <div className="flex items-center justify-between mb-2">
+        <div className="flex flex-col justi items-baseline mb-2">
           <span className="text-sm text-gray-600">Tamanho: {formatSize(product.size)}</span>
-          <span className="text-lg font-bold text-rose-600">
+          <span className="text-lg font-bold text-gold">
             R$ {product.price.toFixed(2).replace('.', ',')}
           </span>
         </div>
