@@ -77,6 +77,17 @@ export const Filters: React.FC<FiltersProps> = ({
             <h2 className="text-lg font-semibold text-gray-900 mb-4">Filtros</h2>
           </div>
 
+          {/* Search Filter */}
+          <div>
+            <h3 className="text-sm font-medium text-gray-900 mb-3">Pesquisar</h3>
+            <input
+                  type="text"
+                  value={filters.search}
+                  placeholder='Pesquisar Produtos...'
+                  onChange={(e) => onFiltersChange({ ...filters, search: e.target.value })}
+                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-gold focus:border-transparent"
+                />
+          </div>
           {/* Category Filter */}
           <div>
             <h3 className="text-sm font-medium text-gray-900 mb-3">Categoria</h3>
