@@ -32,7 +32,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onProductClic
           </button>
         </div>
         <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <button className="w-full bg-rose-500 text-white py-2 px-4 rounded-full hover:bg-rose-600 transition-colors flex items-center justify-center space-x-2">
+          <button className="w-full bg-gold text-white py-2 px-4 rounded-full hover:bg-gold-hover transition-colors flex items-center justify-center space-x-2">
             <ShoppingCart className="h-4 w-4" />
             <span>Ver Detalhes</span>
           </button>

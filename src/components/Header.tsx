@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, ShoppingBag, Search } from 'lucide-react';
-
+import Logo from "../images/logo.png"
 interface HeaderProps {
   onSearchChange: (search: string) => void;
 }
@@ -11,10 +11,9 @@ export const Header: React.FC<HeaderProps> = ({ onSearchChange }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Heart className="h-8 w-8 text-rose-500 mr-2" />
-            <h1 className="text-2xl font-bold text-gray-900">CrocheArte</h1>
+            <img src={Logo} />
           </div>
-          
+
           <div className="flex-1 max-w-lg mx-8">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />

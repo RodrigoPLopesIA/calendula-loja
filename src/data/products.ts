@@ -43,7 +43,7 @@ export const products: Product[] = [
     id: '4',
     name: 'Urban Chic',
     size: '85/90/95/100',
-    colors: ['Terra cota'],
+    colors: ['Terracota'],
     price: 59.99,
     image: BolsaLaranja,
     description: 'Moderna e estilosa com corrente prateada. Ótima para sair à noite com um toque artesanal.',
@@ -93,14 +93,8 @@ export const products: Product[] = [
 
 export const categories = [
   'Todas',
-  'Blusas',
-  'Vestidos',
-  'Tops',
-  'Cardigans',
-  'Shorts',
-  'Saias',
-  'Acessórios',
-  'Moda Praia'
+  "Bolsas",
+  'Acessórios'
 ];
 
 export const allColors = [

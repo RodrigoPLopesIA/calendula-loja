@@ -2,7 +2,14 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        gold: {
+          DEFAULT: '#E8B01E',
+          hover: '#C99717',
+        },
+      },
+    },
   },
   plugins: [],
 };
