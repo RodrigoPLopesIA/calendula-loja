@@ -1,86 +1,94 @@
 import { Product } from '../types';
+import BolsaNatural from '../images/bolsa_branca.jpeg'
+import BolsaNaturalSmille from '../images/bolsa_branca_smille.jpeg'
+import BolsaEstrela from '../images/bolsa_estrela.jpeg'
+import BolsaLaranja from '../images/bolsa_laranja.jpeg'
+import BolsaLaranja2 from '../images/bolsa_laranja2.jpeg'
+import BolsaPretaVermelha from '../images/bolsa_preta_vermelha.jpeg'
+import BolsaPreta from '../images/bolsa_preta.jpeg'
+import BolsaSapinho from '../images/bolsa_sapinho.jpeg'
 
 export const products: Product[] = [
   {
     id: '1',
-    name: 'Blusa Cropped Floral',
+    name: 'Bolsa Boho Neve',
     size: '85/90/95/100',
-    colors: ['Rosa', 'Azul', 'Branco', 'Verde'],
-    price: 89.90,
-    image: 'https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=400',
-    description: 'Blusa cropped delicada feita em crochê com detalhes florais. Perfeita para dias quentes e looks românticos.',
-    category: 'Blusas'
+    colors: ['Natural'],
+    price: 69.99,
+    image: BolsaNatural,
+    description: 'Estilo boho com pontos clássicos em branco cru. Perfeita para looks leves e naturais.',
+    category: 'Bolsas'
   },
   {
     id: '2',
-    name: 'Vestido Longo Boho',
-    size: '85/90/95/100/105',
-    colors: ['Bege', 'Terracota', 'Mostarda', 'Verde Oliva'],
-    price: 149.90,
-    image: 'https://images.pexels.com/photos/7679718/pexels-photo-7679718.jpeg?auto=compress&cs=tinysrgb&w=400',
-    description: 'Vestido longo em crochê com estilo boho chic. Ideal para eventos especiais e ocasiões românticas.',
-    category: 'Vestidos'
+    name: 'Smile Pocket',
+    size: '85/90/95/100',
+    colors: ['Natural'],
+    price: 39.99,
+    image: BolsaNaturalSmille,
+    description: 'Bolsa leve e divertida com detalhe de carinha sorridente, ideal para celular e pequenos itens.',
+    category: 'Bolsas'
   },
   {
     id: '3',
-    name: 'Top Halter Verão',
-    size: '80/85/90/95',
-    colors: ['Coral', 'Amarelo', 'Turquesa', 'Lilás'],
-    price: 69.90,
-    image: 'https://images.pexels.com/photos/7679719/pexels-photo-7679719.jpeg?auto=compress&cs=tinysrgb&w=400',
-    description: 'Top halter em crochê perfeito para o verão. Combina com saias, shorts e calças.',
-    category: 'Tops'
+    name: 'Starbag Solar',
+    size: '85/90/95/100',
+    colors: ['Amarelo'],
+    price: 59.99,
+    image: BolsaEstrela,
+    description: 'Em formato de estrela, com tons terrosos e vibrantes, cheia de personalidade.',
+    category: 'Bolsas'
   },
   {
     id: '4',
-    name: 'Cardigan Oversized',
-    size: '90/95/100/105',
-    colors: ['Cinza', 'Caramelo', 'Off White', 'Marrom'],
-    price: 129.90,
-    image: 'https://images.pexels.com/photos/7679721/pexels-photo-7679721.jpeg?auto=compress&cs=tinysrgb&w=400',
-    description: 'Cardigan oversized em crochê, ideal para looks despojados e aconchegantes.',
-    category: 'Cardigans'
+    name: 'Urban Chic',
+    size: '85/90/95/100',
+    colors: ['Terra cota'],
+    price: 59.99,
+    image: BolsaLaranja,
+    description: 'Moderna e estilosa com corrente prateada. Ótima para sair à noite com um toque artesanal.',
+    category: 'Bolsas'
   },
   {
     id: '5',
-    name: 'Shorts Cintura Alta',
-    size: '70/75/80/85',
-    colors: ['Preto', 'Nude', 'Azul Marinho', 'Vermelho'],
-    price: 59.90,
-    image: 'https://images.pexels.com/photos/7679722/pexels-photo-7679722.jpeg?auto=compress&cs=tinysrgb&w=400',
-    description: 'Shorts de cintura alta em crochê, perfeito para combinar com tops e blusas.',
-    category: 'Shorts'
+    name: 'Sunny Pocket',
+    size: '85/90/95/100',
+    colors: ['Laranja'],
+    price: 39.99,
+    image: BolsaLaranja2,
+    description: 'Pequena e prática, essa bolsa radiante é perfeita para quem ama cores vibrantes.',
+    category: 'Bolsas'
   },
   {
     id: '6',
-    name: 'Saia Midi Renda',
-    size: '75/80/85/90/95',
-    colors: ['Preto', 'Branco', 'Nude', 'Azul'],
-    price: 94.90,
-    image: 'https://images.pexels.com/photos/7679723/pexels-photo-7679723.jpeg?auto=compress&cs=tinysrgb&w=400',
-    description: 'Saia midi com detalhes em renda de crochê. Elegante e versátil para diversas ocasiões.',
-    category: 'Saias'
+    name: 'Cherry Lace e Midnight Bow',
+    size: '85/90/95/100',
+    colors: ['Preto', "Vermelho"],
+    price: 39.99,
+    image: BolsaPretaVermelha,
+    description: 'Bolsinhas delicadas com laço decorativo. Ótimas para presentear ou compor um look fofo.',
+    category: 'Bolsas'
   },
   {
     id: '7',
-    name: 'Bolsa Bucket Casual',
-    size: '25x30',
-    colors: ['Natural', 'Preto', 'Caramelo', 'Verde'],
-    price: 79.90,
-    image: 'https://images.pexels.com/photos/7679724/pexels-photo-7679724.jpeg?auto=compress&cs=tinysrgb&w=400',
-    description: 'Bolsa bucket em crochê, prática e estilosa para o dia a dia.',
-    category: 'Acessórios'
+    name: 'Sol da Meia-Noite',
+    size: '85/90/95/100',
+    colors: ['Preto', "Amarelo"],
+    price: 49.99,
+    image: BolsaPreta,
+    description: 'Contraste marcante entre o preto e o sol dourado. Um charme único e cheio de estilo.',
+    category: 'Bolsas'
   },
   {
     id: '8',
-    name: 'Bikini Vintage',
-    size: '80/85/90/95',
-    colors: ['Coral', 'Amarelo', 'Verde', 'Azul'],
-    price: 89.90,
-    image: 'https://images.pexels.com/photos/7679725/pexels-photo-7679725.jpeg?auto=compress&cs=tinysrgb&w=400',
-    description: 'Bikini em crochê com estilo vintage. Perfeito para praia e piscina.',
-    category: 'Moda Praia'
-  }
+    name: 'KeroBag',
+    size: '85/90/95/100',
+    colors: ['Verde'],
+    price: 59.99,
+    image: BolsaSapinho,
+    description: 'Fofa, divertida e super original! Ideal para crianças ou adultos com espírito lúdico.',
+    category: 'Bolsas'
+  },
 ];
 
 export const categories = [
