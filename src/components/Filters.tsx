@@ -53,7 +53,7 @@ export const Filters: React.FC<FiltersProps> = ({
       {/* Mobile Filter Button */}
       <button
         onClick={onToggle}
-        className="lg:hidden fixed bottom-4 right-4 bg-rose-500 text-white p-3 rounded-full shadow-lg z-50 hover:bg-rose-600 transition-colors"
+        className="lg:hidden fixed bottom-4 right-4 bg-gold text-white p-3 rounded-full shadow-lg z-50 hover:bg-gold transition-colors"
       >
         <Filter className="h-6 w-6" />
       </button>
@@ -83,7 +83,7 @@ export const Filters: React.FC<FiltersProps> = ({
             <select
               value={filters.category}
               onChange={(e) => onFiltersChange({ ...filters, category: e.target.value })}
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-gold focus:border-transparent"
             >
               {categories.map(category => (
                 <option key={category} value={category}>{category}</option>
@@ -101,7 +101,7 @@ export const Filters: React.FC<FiltersProps> = ({
                   type="number"
                   value={filters.minPrice}
                   onChange={(e) => onFiltersChange({ ...filters, minPrice: Number(e.target.value) })}
-                  className="flex-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                  className="flex-1 p-2 w-28 border border-gray-300 rounded-md focus:ring-2 focus:ring-gold focus:border-transparent"
                   min="0"
                 />
               </div>
@@ -111,7 +111,7 @@ export const Filters: React.FC<FiltersProps> = ({
                   type="number"
                   value={filters.maxPrice}
                   onChange={(e) => onFiltersChange({ ...filters, maxPrice: Number(e.target.value) })}
-                  className="flex-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                  className="flex-1 p-2 w-28  border border-gray-300 rounded-md focus:ring-2 focus:ring-gold focus:border-transparent"
                   min="0"
                 />
               </div>
@@ -129,8 +129,8 @@ export const Filters: React.FC<FiltersProps> = ({
                   className={`
                     text-sm px-3 py-2 rounded-full border transition-all duration-200
                     ${filters.colors.includes(color)
-                      ? 'bg-rose-500 text-white border-rose-500'
-                      : 'bg-white text-gray-700 border-gray-300 hover:border-rose-300'
+                      ? 'bg-gold text-white border-gold'
+                      : 'bg-white text-gray-700 border-gray-300 hover:border-gold'
                     }
                   `}
                 >
@@ -151,8 +151,8 @@ export const Filters: React.FC<FiltersProps> = ({
                   className={`
                     text-xs px-2 py-2 rounded-md border transition-all duration-200
                     ${filters.sizes.includes(size)
-                      ? 'bg-rose-500 text-white border-rose-500'
-                      : 'bg-white text-gray-700 border-gray-300 hover:border-rose-300'
+                      ? 'bg-gold text-white border-gold'
+                      : 'bg-white text-gray-700 border-gray-300 hover:border-gold'
                     }
                   `}
                 >
