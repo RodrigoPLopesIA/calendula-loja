@@ -6,11 +6,14 @@ import { ProductModal } from "../components/ProductModal";
 import { products } from "../data/products";
 import { filterProducts } from "../utils/filters";
 import { Product as ProductType, Filters as FiltersType } from "../types";
-import { Heart, Search, ShoppingBag, User} from "lucide-react";
+import { Heart, Search, ShoppingBag, User } from "lucide-react";
 import { ProductCard } from "../components/Product/ProductCard";
+import ProductErrorImage from "../components/Product/ProductErrorImage";
 
 export function Home() {
-  const [selectedProduct, setSelectedProduct] = useState<ProductType | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<ProductType | null>(
+    null
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   const [filters, setFilters] = useState<FiltersType>({
@@ -45,9 +48,9 @@ export function Home() {
         <Header.Image />
         <Header.Input handleSearchChange={handleSearchChange} icon={Search} />
         <Header.Actions>
-            <Header.Action icon={Heart} />
-            <Header.Action icon={ShoppingBag}/>
-            <Header.Action icon={User}/>
+          <Header.Action icon={Heart} />
+          <Header.Action icon={ShoppingBag} />
+          <Header.Action icon={User} />
         </Header.Actions>
       </Header.Root>
 
@@ -71,11 +74,23 @@ export function Home() {
               </p>
             </div>
 
-            <Product.Grid >
-                {products.map(product => (
-                    <ProductCard  product={product} onProductClick={() => console.log()}/>
+            {products.length === 0 ? (
+              <Product.Error>
+                <Product.ErrorImage />
+                <Product.ErrorTitle title="Nenhum produto encontrado" />
+                <Product.ErrorMessage message="Tente ajustar seus filtros para encontrar o que procura." />
+              </Product.Error>
+            ) : (
+              <Product.Grid>
+                {products.map((product) => (
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    onProductClick={() => console.log()}
+                  />
                 ))}
-            </Product.Grid>
+              </Product.Grid>
+            )}
           </div>
         </div>
       </main>
