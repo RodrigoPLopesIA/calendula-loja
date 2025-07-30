@@ -6,9 +6,8 @@ import { ProductModal } from "../components/ProductModal";
 import { products } from "../data/products";
 import { filterProducts } from "../utils/filters";
 import { Product as ProductType, Filters as FiltersType } from "../types";
-import { Heart, Instagram, Search, ShoppingBag, User, Zap } from "lucide-react";
+import { Heart, Instagram, Search, ShoppingBag, User } from "lucide-react";
 import { Footer } from "../components/Footer/Index";
-import { siWhatsapp } from "simple-icons";
 import { FaWhatsapp } from "react-icons/fa";
 
 export function Home() {
