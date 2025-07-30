@@ -1,8 +1,8 @@
 import ErrorMessage from "./ErrorMessage";
 import ErrorTitle from "./ErrorTitle";
-import CardContent from "./CardContent";
+import CardContainer from "./CardContainer";
 import CardImage from "./CardImage";
-import CardImageAction from "./CardButtonFloat";
+import CardImageAction from "./ButtonFloatFavorite";
 import Error from "./Error";
 import ErrorImage from "./ErrorImage";
 import Grid from "./CardGrid";
@@ -14,6 +14,8 @@ import CardPrice from "./CardPrice";
 import CardSize from "./CardSize";
 import CardDescription from "./CardDescription";
 import CardColors from "./CardColors";
+import ButtonFloatDescribe from "./ButtonFloatDescribe";
+import ButtonFloatFavorite from "./ButtonFloatFavorite";
 
 ;
 
@@ -24,12 +26,13 @@ export const Card = {
     ErrorMessage: ErrorMessage,
     Grid: Grid,
     Image: CardImage,
-    Content: CardContent,
+    Container: CardContainer,
     FloatContent: FloatContent,
-    ButtonFloatAction: CardImageAction,
+    FloatDescription: ButtonFloatDescribe,
+    FloatFavorite: ButtonFloatFavorite,
     Body: CardBody,
     title: CardTitle,
-    BodyContent: CardBodyConent,
+    Content: CardBodyConent,
     Price: CardPrice,
     Size: CardSize,
     Description: CardDescription,

@@ -4,7 +4,7 @@ interface ProductImageActionsProps {
   children: ReactNode;
 }
 function ProductImageActions({ children }: ProductImageActionsProps) {
-  return <div className="relative overflow-hidden">{children}</div>;
+  return <div className="relative overflow-hidden group">{children}</div>;
 }
 
 export default ProductImageActions;

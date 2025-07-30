@@ -40,6 +40,10 @@ export function Home() {
   const handleSearchChange = (search: string) => {
     setFilters((prev) => ({ ...prev, search }));
   };
+
+  const favorite = (id: string) => {
+    alert(id)
+  }
   return (
     <div className="min-h-screen bg-gray-50">
       <Header.Root>
@@ -81,22 +85,22 @@ export function Home() {
             ) : (
               <Card.Grid>
                 {products.map((product) => (
-                  <Card.Content product={product}>
-                    <Card.Image name={product.name} image={product.image} />
+                  <Card.Container>
                     <Card.FloatContent>
-                      <Card.ButtonFloatAction icon={Heart} />
-                      <Card.ButtonFloatAction icon={ShoppingBag} />
+                      <Card.Image name={product.name} image={product.image} />
+                      <Card.FloatFavorite icon={Heart} favorite={() => favorite(product.id)}/>
+                      <Card.FloatDescription icon={ShoppingBag} seeDetails={() => handleProductClick(product)}/>
                     </Card.FloatContent>
                     <Card.Body>
                       <Card.title title={product.name} />
-                      <Card.BodyContent>
+                      <Card.Content>
                         <Card.Price price={product.price} />
                         <Card.Size size={product.size} />
-                        <Card.Colors colors={product.colors} />
-                        <Card.Description description={product.description} />
-                      </Card.BodyContent>
+                      </Card.Content>
+                      <Card.Colors colors={product.colors} />
+                      <Card.Description description={product.description} />
                     </Card.Body>
-                  </Card.Content>
+                  </Card.Container>
                 ))}
               </Card.Grid>
             )}
