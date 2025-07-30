@@ -1,14 +1,12 @@
 import React, { useState, useMemo } from "react";
 import { Header } from "../components/header/Index";
 import { Filters } from "../components/Filters";
-import { Product } from "../components/Product/Index";
+import { Card } from "../components/Card/Index";
 import { ProductModal } from "../components/ProductModal";
 import { products } from "../data/products";
 import { filterProducts } from "../utils/filters";
 import { Product as ProductType, Filters as FiltersType } from "../types";
 import { Heart, Search, ShoppingBag, User } from "lucide-react";
-import { ProductCard } from "../components/Product/ProductCard";
-import ProductErrorImage from "../components/Product/ProductErrorImage";
 
 export function Home() {
   const [selectedProduct, setSelectedProduct] = useState<ProductType | null>(
@@ -29,7 +27,7 @@ export function Home() {
     return filterProducts(products, filters);
   }, [filters]);
 
-  const handleProductClick = (product: Product) => {
+  const handleProductClick = (product: ProductType) => {
     setSelectedProduct(product);
     setIsModalOpen(true);
   };
@@ -75,21 +73,32 @@ export function Home() {
             </div>
 
             {products.length === 0 ? (
-              <Product.Error>
-                <Product.ErrorImage />
-                <Product.ErrorTitle title="Nenhum produto encontrado" />
-                <Product.ErrorMessage message="Tente ajustar seus filtros para encontrar o que procura." />
-              </Product.Error>
+              <Card.Error>
+                <Card.ErrorImage />
+                <Card.ErrorTitle title="Nenhum produto encontrado" />
+                <Card.ErrorMessage message="Tente ajustar seus filtros para encontrar o que procura." />
+              </Card.Error>
             ) : (
-              <Product.Grid>
+              <Card.Grid>
                 {products.map((product) => (
-                  <ProductCard
-                    key={product.id}
-                    product={product}
-                    onProductClick={() => console.log()}
-                  />
+                  <Card.Content product={product}>
+                    <Card.Image name={product.name} image={product.image} />
+                    <Card.FloatContent>
+                      <Card.ButtonFloatAction icon={Heart} />
+                      <Card.ButtonFloatAction icon={ShoppingBag} />
+                    </Card.FloatContent>
+                    <Card.Body>
+                      <Card.title title={product.name} />
+                      <Card.BodyContent>
+                        <Card.Price price={product.price} />
+                        <Card.Size size={product.size} />
+                        <Card.Colors colors={product.colors} />
+                        <Card.Description description={product.description} />
+                      </Card.BodyContent>
+                    </Card.Body>
+                  </Card.Content>
                 ))}
-              </Product.Grid>
+              </Card.Grid>
             )}
           </div>
         </div>

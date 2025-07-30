@@ -23,4 +23,5 @@ export interface Filters {
   colors: string[];
   sizes: string[];
   category: string;
+  
 }
